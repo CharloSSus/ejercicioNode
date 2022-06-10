@@ -12,7 +12,7 @@ fs.readFile("./nombres.txt", (error, leer) =>{
        nombres.forEach(nombre=>{
            personas.push({
                nombre,
-               edad: Math.floor(Math.random()*10)+20 
+               edad: Math.floor(Math.random()*21)+10 
            })
        })
 
@@ -24,7 +24,7 @@ fs.readFile("./nombres.txt", (error, leer) =>{
                console.log("Todo ok!")
             }
            
-       })
+       });
         }
     }   
 );
