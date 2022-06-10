@@ -11,15 +11,21 @@ fs.readFile("./nombres.txt", (error, leer) =>{
         
        nombres.forEach(nombre=>{
            personas.push({
-               nombres,
-               edad: 
+               nombre,
+               edad: Math.floor(Math.random()*10)+20 
            })
        })
 
-
-
-            
+       let estudiantes = JSON.stringify(personas);
+       fs.writeFile("./estudiantes.json", estudiantes, error =>{
+           if(error){
+               console.log("Ha habido un error")
+           }else{
+               console.log("Todo ok!")
+            }
+           
+       })
         }
-    }
+    }   
 );
 
